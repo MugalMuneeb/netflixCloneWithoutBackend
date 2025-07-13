@@ -1,0 +1,479 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif, Verdana, Geneva, Tahoma, Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: white;
+}
+
+/* -------------------------------AI------------------------------- */
+#texts,
+#elements,
+nav {
+    position: relative;
+    z-index: 2;
+    /* Bring above the overlay */
+    text-align: center;
+    padding: 20px;
+}
+
+#fst {
+    background-image: url(logos/B_G.jpg);
+    height: 98vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    /* 👇 Bottom curve */
+    clip-path: polygon(0 0,
+            100% 0,
+            100% 96vh,
+            50% 98vh,
+            0 96vh);
+}
+
+#cvr {
+    background-color: rgba(0, 0, 0, .7);
+    /* transparent black overlay */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+/* -------------------------------ME------------------------------- */
+#ttl {
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+body {
+    background-color: #000000;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#texts {
+    max-width: 650px;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+
+#h-1 {
+    font-weight: 900;
+    font-size: 56px;
+}
+
+#h-3 {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#P {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#logo {
+    width: 150px;
+}
+
+#Sin-btn {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    width: .8in;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#email {
+    border: 1px solid white;
+    background-color: rgba(15, 15, 15, 0.4);
+    color: white;
+    height: .6in;
+    width: 4in;
+    font-weight: bold;
+    border-radius: 3px;
+    padding-left: 20px;
+    font-size: 16px;
+    padding: 20px 10px 10px 20px;
+}
+
+/* ------------------------------------------AI--------------------------------------------------------- */
+.floating-label {
+    position: relative;
+    width: 4in;
+    margin-bottom: 20px;
+}
+
+.floating-label label {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: #ccc;
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+    padding: 0 4px;
+    pointer-events: none;
+    transition: 0.3s ease all;
+    font-size: 16px;
+}
+
+#email:focus+label,
+#email:not(:placeholder-shown):valid+label {
+    top: 4px;
+    left: 16px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+/* ------------------------------------------AI--------------------------------------------------------- */
+#G-S-BTN {
+    border: none;
+    border-radius: 3px;
+    background-color: red;
+    color: white;
+    height: .6in;
+    width: 2in;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: bolder;
+    margin-left: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#SVG {
+    display: block;
+    font-weight: 900;
+    width: 24px;
+    height: 24px;
+}
+
+#SVG {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+#elements {
+    display: flex;
+    justify-content: center;
+}
+
+/* ----------------------------------------------------second part------------------------------------------------------- */
+.slider-wrapper {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#main-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 2rem;
+    padding-top: 0;
+    margin: 2rem 0;
+    border-radius: 1rem;
+}
+
+#main-container::-webkit-scrollbar {
+    display: none;
+}
+
+#main-container img {
+    flex: 0 0 22%;
+    /* For 4.5 images */
+    margin: 0 5px;
+    border-radius: 10px;
+    border: 2px rgb(255, 255, 255, 0.3) solid;
+    scroll-snap-align: start;
+    max-width: 2in;
+    padding: 30px 20px;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.6);
+    /* border-radius: 50%; */
+    padding: 5px;
+}
+
+.left-btn {
+    left: 5px;
+}
+
+.right-btn {
+    right: 5px;
+}
+
+.flip-horizontal {
+    transform: scaleX(-1);
+    /* flips the SVG horizontally */
+}
+
+#T-N {
+    /* border: red solid 2px; */
+    margin: 4rem 0 0 1rem;
+    font-size: 23px;
+}
+
+/*------------------------------------------3rd part--------------------------------------------------------- */
+#m-r-t-j {
+    margin: 2rem;
+    font-size: 25px;
+}
+
+.third {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Center the parent horizontally */
+    padding: 40px 20px;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute cards with space between */
+    flex-wrap: wrap;
+    /* Wrap to next line if screen is small */
+    gap: 20px;
+    /* Optional: adds spacing if wrap happens */
+    margin-top: 30px;
+}
+
+.card {
+    position: relative;
+    color: #b2b0b7;
+    height: 3.3in;
+    width: 1.6in;
+    flex: 1 1 22%;
+    /* Make each card around 22% width to fit 4 in a row with space */
+    background-image: linear-gradient(to right, #1c1931, #200e18);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formating {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.formating p {
+    color: rgba(255, 255, 255, 0.7);
+    ;
+}
+
+.icon-des {
+    position: absolute;
+    /* Takes SVG out of normal flow */
+    right: 20px;
+    /* Pushes to the right */
+    bottom: 20px;
+    /* Pushes to the bottom */
+}
+
+/*------------------------------------------4th part--------------------------------------------------------- */
+#faq-h3 {
+    font-size: 22px;
+    margin-left: 1.7in;
+    padding: 20px 0 10px 0;
+}
+
+.faq {
+    max-width: 1000px;
+    margin: 20px auto;
+    font-family: sans-serif;
+}
+
+.faq-question {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background-color: #2d2d2d;
+    height: .7in;
+    padding: 22px 20px;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.faq-answer {
+    display: none;
+    padding: 20px 10px;
+    background-color: #2d2d2d;
+}
+
+.pls-icn {
+    position: absolute;
+    right: 0;
+    margin-right: 2in;
+    display: inline;
+    cursor: pointer;
+}
+
+.pls-icn svg {
+    transition: transform 0.3s ease;
+}
+
+.faq-question.rotate .pls-icn svg {
+    transform: rotate(45deg);
+}
+
+.fourth {
+    margin-bottom: 1in;
+}
+
+/*------------------------------------------5th part--------------------------------------------------------- */
+#fifth-fstP {
+    font-size: 18px;
+    font-weight: 450;
+    text-align: center;
+}
+
+.fifth-inpt-wdth input {
+    width: 5in;
+}
+
+#ftr {
+    padding: 40px 2in;
+    /* 2 inches padding from left and right */
+    background-color: #000;
+    color: #777;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ftr h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    align-self: flex-start;
+}
+
+#ftr h3 a {
+    color: #777;
+}
+
+#ftr .footer-cols {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 60px;
+    width: 100%;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 150px;
+    text-align: left;
+}
+
+.footer-col a {
+    text-decoration: underline;
+    color: #777;
+    font-size: 16px;
+    padding-bottom: 4px;
+}
+
+.footer-col a:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+/*------------------------------------------Footer part--------------------------------------------------------- */
+footer {
+    width: 90%;
+    height: 1.5in;
+    margin: auto;
+}
+
+.dropdown-wrapper {
+    width: 150px;
+    margin: 50px 0;
+    font-family: Arial, sans-serif;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+}
+
+select {
+    width: 100%;
+    height: 40px;
+    /* Fix height for vertical alignment */
+    padding: 0 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px 8px;
+    cursor: pointer;
+
+    /* Center text */
+    text-align: center;
+    text-align-last: center;
+    /* Important for select */
+}
+
+select:focus {
+    outline: none;
+    border-color: #888;
+}
+
+#moreInfo {
+    display: none;
+    margin-top: 10px;
+}
+
+#moreInfo a {
+    text-decoration-line: underline;
+    color: rgb(68, 142, 244);
+}
+
+.lgh-blk {
+    color: #b3b3b3;
+    padding: 10px;
+}
+
+.clickable {
+    cursor: pointer;
+    color: rgb(68, 142, 244);
+    text-decoration: underline;
+}
